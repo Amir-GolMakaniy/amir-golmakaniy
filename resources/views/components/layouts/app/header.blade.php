@@ -1,129 +1,59 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html dir="rtl" lang="en">
+
 <head>
-    @include('partials.head')
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیر گلمکانی</title>
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" sizes="16x16">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.green.css') }}">
+
 </head>
-<body class="min-h-screen bg-white dark:bg-zinc-800">
-<flux:header container class="border-b border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
-    <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left"/>
 
-    <a href="{{ route('dashboard') }}" class="ms-2 me-5 flex items-center space-x-2 rtl:space-x-reverse lg:ms-0"
-       wire:navigate>
-        <x-app-logo/>
-    </a>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <nav class="nav d-flex" id="home">
+            <div class="logo">
+                <a href="#">
+                    امیر گلمکانی
+                </a>
+            </div>
+            <!-- toggle icon -->
+            <a href="javascript:void(0)" class="burger">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+                <span class="four"></span>
 
-    <flux:navbar class="-mb-px max-lg:hidden">
-        <flux:navbar.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')"
-                          wire:navigate>
-            {{ __('Dashboard') }}
-        </flux:navbar.item>
-    </flux:navbar>
+                <div class="close-icon">
+                    <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M17.4492 14.4202L29.5992 2.67518C29.8723 2.36697 30.015 1.97052 29.9988 1.56504C29.9826 1.15956 29.8087 0.774925 29.5118 0.487995C29.215 0.201065 28.8171 0.0329733 28.3977 0.0173115C27.9782 0.00164963 27.5681 0.139571 27.2492 0.403514L15.0992 12.1485L2.94924 0.387402C2.6304 0.12346 2.22028 -0.0144603 1.80082 0.00120154C1.38136 0.0168634 0.983459 0.184954 0.686635 0.471884C0.389811 0.758814 0.215923 1.14345 0.199721 1.54893C0.183519 1.95441 0.326196 2.35086 0.59924 2.65907L12.7492 14.4202L0.582573 26.1652C0.408104 26.3096 0.266403 26.4873 0.166364 26.6872C0.0663255 26.8871 0.0101078 27.1048 0.00124197 27.3267C-0.00762386 27.5486 0.0310527 27.7698 0.114844 27.9766C0.198635 28.1833 0.325732 28.3711 0.488156 28.5281C0.650581 28.6851 0.844826 28.808 1.0587 28.889C1.27258 28.97 1.50146 29.0074 1.731 28.9988C1.96053 28.9902 2.18575 28.9359 2.39252 28.8392C2.5993 28.7425 2.78316 28.6055 2.93257 28.4368L15.0992 16.6918L27.2492 28.4368C27.5681 28.7008 27.9782 28.8387 28.3977 28.823C28.8171 28.8074 29.215 28.6393 29.5118 28.3524C29.8087 28.0654 29.9826 27.6808 29.9988 27.2753C30.015 26.8698 29.8723 26.4734 29.5992 26.1652L17.4492 14.4202Z"/>
+                    </svg>
 
-    <flux:spacer/>
-
-    <flux:navbar class="me-1.5 space-x-0.5 rtl:space-x-reverse py-0!">
-        <flux:tooltip :content="__('Search')" position="bottom">
-            <flux:navbar.item class="!h-10 [&>div>svg]:size-5" icon="magnifying-glass" href="#" :label="__('Search')"/>
-        </flux:tooltip>
-        <flux:tooltip :content="__('Repository')" position="bottom">
-            <flux:navbar.item
-                    class="h-10 max-lg:hidden [&>div>svg]:size-5"
-                    icon="folder-git-2"
-                    href="https://github.com/laravel/livewire-starter-kit"
-                    target="_blank"
-                    :label="__('Repository')"
-            />
-        </flux:tooltip>
-        <flux:tooltip :content="__('Documentation')" position="bottom">
-            <flux:navbar.item
-                    class="h-10 max-lg:hidden [&>div>svg]:size-5"
-                    icon="book-open-text"
-                    href="https://laravel.com/docs/starter-kits#livewire"
-                    target="_blank"
-                    label="Documentation"
-            />
-        </flux:tooltip>
-    </flux:navbar>
-
-    <!-- Desktop User Menu -->
-    <flux:dropdown position="top" align="end">
-        <flux:profile
-                class="cursor-pointer"
-                :initials="auth()->user()->initials()"
-        />
-
-        <flux:menu>
-            <flux:menu.radio.group>
-                <div class="p-0 text-sm font-normal">
-                    <div class="flex items-center gap-2 px-1 py-1.5 text-start text-sm">
-                                <span class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-lg">
-                                    <span
-                                            class="flex h-full w-full items-center justify-center rounded-lg bg-neutral-200 text-black dark:bg-neutral-700 dark:text-white"
-                                    >
-                                        {{ auth()->user()->initials() }}
-                                    </span>
-                                </span>
-
-                        <div class="grid flex-1 text-start text-sm leading-tight">
-                            <span class="truncate font-semibold">{{ auth()->user()->name }}</span>
-                            <span class="truncate text-xs">{{ auth()->user()->email }}</span>
-                        </div>
-                    </div>
                 </div>
-            </flux:menu.radio.group>
-
-            <flux:menu.separator/>
-
-            <flux:menu.radio.group>
-                <flux:menu.item :href="route('settings.profile')" icon="cog"
-                                wire:navigate>{{ __('Settings') }}</flux:menu.item>
-            </flux:menu.radio.group>
-
-            <flux:menu.separator/>
-
-            <form method="POST" action="{{ route('logout') }}" class="w-full">
-                @csrf
-                <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" class="w-full">
-                    {{ __('Log Out') }}
-                </flux:menu.item>
-            </form>
-        </flux:menu>
-    </flux:dropdown>
-</flux:header>
-
-<!-- Mobile Menu -->
-<flux:sidebar stashable sticky
-              class="lg:hidden border-e border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
-    <flux:sidebar.toggle class="lg:hidden" icon="x-mark"/>
-
-    <a href="{{ route('dashboard') }}" class="ms-1 flex items-center space-x-2 rtl:space-x-reverse" wire:navigate>
-        <x-app-logo/>
-    </a>
-
-    <flux:navlist variant="outline">
-        <flux:navlist.group :heading="__('Platform')">
-            <flux:navlist.item icon="layout-grid" :href="route('dashboard')" :current="request()->routeIs('dashboard')"
-                               wire:navigate>
-                {{ __('Dashboard') }}
-            </flux:navlist.item>
-        </flux:navlist.group>
-    </flux:navlist>
-
-    <flux:spacer/>
-
-    <flux:navlist variant="outline">
-        <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-            {{ __('Repository') }}
-        </flux:navlist.item>
-
-        <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
-            {{ __('Documentation') }}
-        </flux:navlist.item>
-    </flux:navlist>
-</flux:sidebar>
-
-{{ $slot }}
-
-@fluxScripts
-</body>
-</html>
+            </a>
+            <div class="navigation-bar">
+                <ul id="nav">
+                    <li class="active"><a href="#">خانه</a></li>
+                    <li><a href="#about">درباره من</a></li>
+                    <li><a href="#services">سرویس ها</a></li>
+                    <li><a href="#portfolio">نمونه کار ها</a></li>
+                    <li><a href="#contact">تماس با من</a></li>
+                    <li class="darkmode-btn d-desktop">
+                        <a href="javascript:void(0)">
+                            <img src="{{ asset('images/brightness.svg') }}" alt="brightness" class="bright">
+                            <img src="{{ asset('images/moon.svg') }}" alt="moon" class="dark"> </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="darkmode-btn d-mobile"><a href="javascript:void(0)">
+                    <img src="{{ asset('images/brightness.svg') }}" alt="brightness" class="bright">
+                    <img src="{{ asset('images/moon.svg') }}" alt="moon" class="dark"> </a></div>
+        </nav>
+    </div>
+</header>
