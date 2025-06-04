@@ -2,8 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use Spatie\Sitemap\SitemapGenerator;
 
 Volt::route('/', 'home')->name('home');
+
+Route::get('/1', function () {
+	Artisan::call('migrate:fresh');
+	Artisan::call('db:seed');
+	return 'done';
+});
 
 Route::view('dashboard', 'dashboard')
 	->middleware(['auth', 'verified'])

@@ -73,8 +73,8 @@ new class extends Component {
                     </div>
                 </div>
                 <div class="col-right">
-                    <img class="image-main" src="{{ asset('images/amir-day.png') }}" alt="amir-golmakani">
-                    <img class="image-darkmode" src="{{ asset('images/amir-night.png') }}" alt="amir-golmakani-dark">
+                    <img class="image-main" src="{{ asset('images/amir-day.png') }}" alt="">
+                    <img class="image-darkmode" src="{{ asset('images/amir-night.png') }}" alt="">
                 </div>
             </div>
         </div>
@@ -129,7 +129,7 @@ new class extends Component {
         <div class="container">
             <div class="about-inner d-flex">
                 <div class="about-col-left">
-                    <img src="{{ asset('images/') }}" alt="about">
+                    <img src="{{ asset('images/') }}" alt="">
                 </div>
                 <div class="about-col-right">
                     <h2 class="about-heading">درباره من</h2>

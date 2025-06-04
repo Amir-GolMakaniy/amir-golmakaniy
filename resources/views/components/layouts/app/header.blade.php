@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="en">
+<html dir="rtl" lang="fa">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
     <title>امیر گلمکانی</title>
+    <meta name="title" content="امیر گلمکانی"/>
+    <meta name="description" content="طراحی سایت با Livewire و Tailwind CSS"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://amir-golmakaniy.ir/"/>
+    <meta property="og:title" content="امیر گلمکانی"/>
+    <meta property="og:description" content="طراحی سایت با Livewire و Tailwind CSS"/>
+    {{--<meta property="og:image" content="{{ asset('1.jpg') }}"/>--}}
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content="https://amir-golmakaniy.ir/"/>
+    <meta property="twitter:title" content="امیر گلمکانی"/>
+    <meta property="twitter:description" content="طراحی سایت با Livewire و Tailwind CSS"/>
+    {{--<meta property="twitter:image" content="{{ asset('1.jpg') }}"/>--}}
+
+    <!-- Styles -->
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}" sizes="16x16">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('css/owl.theme.green.css') }}">
-
 </head>
 
 <body>
