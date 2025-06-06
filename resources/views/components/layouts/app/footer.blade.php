@@ -44,6 +44,7 @@
         </div>
     </div>
 </footer>
+
 <!-- Project view modal -->
 <div class="modal-container">
     <div class="modal">
@@ -64,6 +65,34 @@
                 {{--<span>آدرس پروژه:-</span> --}}
                 {{--<a href="https://netcopy.ir">https://netcopy.ir</a>--}}
                 {{--</li>--}}
+            </ul>
+
+            <div class="close-btn">
+                <a href="javascript:void(0)" class="btn btn-blue close-modal">بستن</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project view modal -->
+<div class="modal-container">
+    <div class="modal">
+        <div class="modal-image">
+            <img src="{{ asset('images/projects/2.png') }}" alt="image">
+        </div>
+        <div class="modal-content">
+
+            <h3>مدیریت باشگاه</h3>
+            <p class="requirments">
+                مدیریت باشگاه
+            </p>
+
+            <ul>
+                <li><span>مهارت ها:-</span> HTML, CSS, TAILWIND CSS, FLUX UI, JAVASCRIPT, LARAVEL, LIVEWIRE</li>
+                <li><span>زمان اتمام پروژه:-</span>7 days</li>
+                <li>
+                    <span>آدرس پروژه:-</span>
+                    <a href="https://club.amir-golmakaniy.ir">club.amir-golmakaniy.ir</a>
+                </li>
             </ul>
 
             <div class="close-btn">

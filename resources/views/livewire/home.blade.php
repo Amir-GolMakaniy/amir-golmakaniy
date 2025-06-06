@@ -315,6 +315,19 @@ new class extends Component {
                         </div>
                     </div>
                 </div>
+                <!-- item -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="{{ asset('images/projects/2.png') }}" alt="project image">
+                    </div>
+                    <div class="project-content">
+                        <h3>مدیریت باشگاه</h3>
+                        <div class="project-view d-flex">
+                            <span>Laravel , Tailwind CSS</span>
+                            <a href="javascript:void(0)" class="btn-view">مشاهده</a>
+                        </div>
+                    </div>
+                </div>
                 {{--<div class="view-more-block">
                     <a href="#" class="btn btn-outline">مشاهده بیشتر</a>
                 </div>--}}
