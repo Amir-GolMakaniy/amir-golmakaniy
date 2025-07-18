@@ -1,5 +1,5 @@
 <flux:footer container class="shadow-2xl bg-zinc-200 dark:bg-zinc-900">
-    <div class="flex justify-between items-center">
+    <div class="flex flex-col md:flex-row justify-between items-center">
         <flux:button-or-link class="cursor-pointer text-3xl" href="tel:09381583958">0938-158-3958</flux:button-or-link>
 
         <span class="ms-10 text-2xl truncate font-semibold">امیر گلمکانی</span>

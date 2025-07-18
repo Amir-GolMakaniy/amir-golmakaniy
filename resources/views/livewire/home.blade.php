@@ -8,12 +8,12 @@ new class extends Component {
 
 <flux:main>
     <flux:container>
-        <section class="mt-25 grid grid-cols-2 scroll-mt-40" id="home">
-            <div class="space-y-4">
+        <section class="mt-25 grid md:grid-cols-2 grid-cols-1 scroll-mt-40" id="home">
+            <div class="space-y-4 flex flex-col items-center md:items-start justify-center md:justify-start text-center md:text-start">
                 <h1 class="text-xl">سلام! من امیرم 👋</h1>
                 <h1 class="text-6xl font-bold">امیر گلمکانی</h1>
                 <h1 class="text-5xl font-bold text-blue-500">فول استک دولوپر</h1>
-                <h1 class="text-3xl font-bold">توسعه دهنده وب با تمرکز روی Livewire و Tailwind</h1>
+                <h1 class="text-3xl font-bold">توسعه دهنده وب با Livewire و Tailwind</h1>
                 <p class="text-wrap text-zinc-700 dark:text-zinc-300">
                     فارق و التحصیل از رشته کامپیوتر ، با علاقه شدید به برنامه نویسی بک اند و حرکت به سمت فرانت اند.
                     فعلا
@@ -28,7 +28,7 @@ new class extends Component {
                     <flux:button class="px-10 py-6" variant="primary" href="#projects">مشاهده نمونه کار ها</flux:button>
                 </div>
 
-                <div class="mt-10 mr-12">
+                <div class="mt-10">
                     <flux:button-or-link class="cursor-pointer text-2xl" href="tel:09381583958">
                         0938-158-3958
                     </flux:button-or-link>
@@ -69,11 +69,11 @@ new class extends Component {
             </div>
         </section>
 
-        <section class="mt-20 grid grid-cols-2 p-20 shadow-2xl scroll-mt-40" id="about">
+        <section class="mt-20 grid md:grid-cols-2 grid-cols-1 p-20 shadow-2xl scroll-mt-40" id="about">
             <div class=""></div>
-            <div class="space-y-8">
+            <div class="space-y-8 flex flex-col items-center md:items-start justify-center text-center md:text-start">
                 <h1 class="text-6xl font-bold">درباره من</h1>
-                <h1 class="text-4xl font-bold">من امیر گلمکانی‌ام - فول‌استک دولوپر</h1>
+                <h1 class="text-4xl font-bold">من امیر گلمکانی‌ام <br/> فول‌استک دولوپر</h1>
                 <p class="text-wrap text-zinc-700 dark:text-zinc-300">
                     فارق و التحصیل از رشته کامپیوتر ، با علاقه شدید به برنامه نویسی بک اند و حرکت به سمت فرانت اند.
                     فعلا
@@ -88,7 +88,7 @@ new class extends Component {
 
         <section class="mt-20 scroll-mt-40" id="jobs">
             <h2 class="text-5xl font-bold">مهارت های من</h2>
-            <div class="grid grid-cols-2 mt-8 gap-10">
+            <div class="grid md:grid-cols-2 grid-cols-1 mt-8 gap-10">
                 <div class="">
                     <div class="flex justify-between mb-1">
                         <span class="text-base font-medium text-blue-700 dark:text-white">PHP</span>
@@ -173,7 +173,7 @@ new class extends Component {
 
         <section class="mt-20 scroll-mt-40" id="service">
             <h2 class="text-5xl font-bold">چی کار میکنم؟</h2>
-            <div class="mt-20 flex gap-4">
+            <div class="mt-20 flex gap-4 flex-col md:flex-row">
                 <div class="cursor-pointer p-10 hover:bg-blue-500 hover:text-white transition-all delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 rounded-md space-y-6 shadow-2xl">
                     <h1 class="text-3xl font-bold">طراحی وب</h1>
                     <p class="">طراحی و توسعه وبسایت‌های داینامیک با PHP، Laravel، Livewire و Tailwind.
@@ -197,7 +197,7 @@ new class extends Component {
 
         <section class="mt-20 scroll-mt-20" id="projects">
             <h1 class="text-5xl font-bold">پروژه های من</h1>
-            <div class="grid grid-cols-2 mt-20 gap-4">
+            <div class="grid md:grid-cols-2 grid-cols-1 mt-20 gap-4">
                 <div class="bg-zinc-50 dark:bg-zinc-800 transition-all delay-150 duration-300 ease-in-out hover:-translate-y-1 space-y-6 rounded-md cursor-pointer shadow-2xl">
                     <img src="{{ asset('images/projects/1.png') }}" alt="navid-javadi" class="rounded-md h-100 w-full">
                     <div class="pr-5 pb-5 space-y-4">
