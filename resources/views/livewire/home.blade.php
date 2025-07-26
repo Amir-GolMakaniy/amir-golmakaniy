@@ -15,13 +15,10 @@ new class extends Component {
                 <h1 class="text-5xl font-bold text-blue-500">فول استک دولوپر</h1>
                 <h1 class="text-3xl font-bold">توسعه دهنده وب با Livewire و Tailwind</h1>
                 <p class="text-wrap text-zinc-700 dark:text-zinc-300">
-                    فارق و التحصیل از رشته کامپیوتر ، با علاقه شدید به برنامه نویسی بک اند و حرکت به سمت فرانت اند.
-                    فعلا
-                    با
-                    Livewire و Tailwind پروژه می سازم ، و دنبال رشد جدی توی این فضا هستم. نمونه کار هایی که اینجا می
-                    بینی
-                    بخشی
-                    از مسیر حرفه ای منه برای ساختن یه برند شخصی قدرتمند.
+                    فارغ‌التحصیل رشته کامپیوترم و مسیر حرفه‌ای خودم رو با تمرکز روی بک‌اند شروع کردم. فعلاً با Livewire
+                    و Tailwind پروژه می‌سازم و به‌صورت جدی در حال گسترش مهارت‌هام در فرانت‌اند هستم. اینجا بخشی از
+                    نمونه‌کارهایی رو می‌بینی که نه‌تنها برای یادگیری عمیق‌تر ساختم، بلکه پایه‌ی برند شخصی من در مسیر
+                    برنامه‌نویس شدن واقعی‌ان.
                 </p>
 
                 <div class="mt-10">
@@ -36,7 +33,7 @@ new class extends Component {
 
                 <div class="flex space-x-6">
 
-                    <a href="t.me/Amir_Golmakaniy">
+                    <a href="https://t.me/Amir_Golmakaniy">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#0088cc"
                              class="bi bi-telegram" viewBox="0 0 16 16">
                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
@@ -69,19 +66,16 @@ new class extends Component {
             </div>
         </section>
 
-        <section class="mt-20 grid md:grid-cols-2 grid-cols-1 p-20 shadow-2xl scroll-mt-40" id="about">
+        <section class="mt-20 grid md:grid-cols-2 grid-cols-1 shadow-2xl scroll-mt-40" id="about">
             <div class=""></div>
             <div class="space-y-8 flex flex-col items-center md:items-start justify-center text-center md:text-start">
                 <h1 class="text-6xl font-bold">درباره من</h1>
                 <h1 class="text-4xl font-bold">من امیر گلمکانی‌ام <br/> فول‌استک دولوپر</h1>
                 <p class="text-wrap text-zinc-700 dark:text-zinc-300">
-                    فارق و التحصیل از رشته کامپیوتر ، با علاقه شدید به برنامه نویسی بک اند و حرکت به سمت فرانت اند.
-                    فعلا
-                    با
-                    Livewire و Tailwind پروژه می سازم ، و دنبال رشد جدی توی این فضا هستم. نمونه کار هایی که اینجا می
-                    بینی
-                    بخشی
-                    از مسیر حرفه ای منه برای ساختن یه برند شخصی قدرتمند.
+                    من امیر گل‌مکانی هستم، فارغ‌التحصیل رشته کامپیوتر و علاقه‌مند به توسعه وب. فعلاً تمرکزم روی
+                    برنامه‌نویسی بک‌اند با PHP و Livewire هست، و در حال یادگیری عمیق‌تر فرانت‌اند با Tailwind و
+                    Alpine.js. عاشق ساختن پروژه‌هایی‌ام که کاربردی باشن، تمیز نوشته بشن و واقعاً یه مسئله رو حل کنن. این
+                    سایت برای منه؛ هم به‌عنوان نمونه‌کار، هم بخشی از مسیر ساخت برند شخصی.
                 </p>
             </div>
         </section>
@@ -202,28 +196,6 @@ new class extends Component {
                     <img src="{{ asset('images/projects/1.png') }}" alt="navid-javadi" class="rounded-md h-100 w-full">
                     <div class="pr-5 pb-5 space-y-4">
                         <h1 class="text-2xl font-bold">مدیریت باشگاه رشد</h1>
-                        <flux:modal.trigger name="roshd">
-                            <flux:button>مشاهده</flux:button>
-                        </flux:modal.trigger>
-
-                        <flux:modal name="roshd" class="md:w-96">
-                            <div class="space-y-6">
-                                <div>
-                                    <flux:heading size="lg">Update profile</flux:heading>
-                                    <flux:text class="mt-2">Make changes to your personal details.</flux:text>
-                                </div>
-
-                                <flux:input label="Name" placeholder="Your name"/>
-
-                                <flux:input label="Date of birth" type="date"/>
-
-                                <div class="flex">
-                                    <flux:spacer/>
-
-                                    <flux:button type="submit" variant="primary">Save changes</flux:button>
-                                </div>
-                            </div>
-                        </flux:modal>
                     </div>
                 </div>
 

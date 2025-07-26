@@ -1,6 +1,8 @@
 <flux:header container class="fixed w-full border-b border-zinc-200 bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900">
     <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left"/>
 
+    <flux:spacer class="md:hidden"/>
+
     <a href="{{ route('home') }}" class="ms-2 me-5 flex items-center space-x-2 rtl:space-x-reverse lg:ms-0"
        wire:navigate>
         <x-app-logo/>
@@ -25,7 +27,7 @@
             نمونه کار ها
         </flux:navbar.item>
 
-        <flux:navbar.item icon="phone">
+        <flux:navbar.item icon="phone" href="#phone">
             تماس با من
         </flux:navbar.item>
     </flux:navbar>
@@ -59,23 +61,23 @@
     </a>
 
     <flux:navlist variant="outline">
-        <flux:navlist.item icon="home" wire:navigate>
+        <flux:navlist.item icon="home" href="#home">
             خانه
         </flux:navlist.item>
 
-        <flux:navlist.item icon="user" wire:navigate>
+        <flux:navlist.item icon="user" href="#about">
             درباره من
         </flux:navlist.item>
 
-        <flux:navlist.item icon="layout-grid" wire:navigate>
+        <flux:navlist.item icon="layout-grid" href="#service">
             سرویس ها
         </flux:navlist.item>
 
-        <flux:navlist.item icon="photo" wire:navigate>
+        <flux:navlist.item icon="photo" href="#projects">
             نمونه کار ها
         </flux:navlist.item>
 
-        <flux:navlist.item icon="phone" wire:navigate>
+        <flux:navlist.item icon="phone" href="#phone">
             تماس با من
         </flux:navlist.item>
     </flux:navlist>
